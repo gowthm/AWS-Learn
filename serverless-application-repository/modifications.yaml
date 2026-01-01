@@ -3,7 +3,7 @@ Metadata:
   AWS::ServerlessRepo::Application:
     Name: my-app
     Description: Hello World
-    Author: hovs
+    Author: Stephane
     SemanticVersion: 0.0.1
 
 

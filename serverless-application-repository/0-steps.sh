@@ -50,7 +50,7 @@ sam publish --template packaged.yaml --region us-east-1
 # {
 #   "Name": "my-app",
 #   "Description": "Hello World",
-#   "Author": "hovs",
+#   "Author": "Stephane",
 # 	"SemanticVersion": "0.0.1"
 # }
 

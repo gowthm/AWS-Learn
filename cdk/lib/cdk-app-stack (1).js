@@ -1,10 +1,9 @@
-const cdk = require("aws-cdk-lib");
-
-const s3 = require("aws-cdk-lib/aws-s3");
-const iam = require("aws-cdk-lib/aws-iam");
-const lambda = require("aws-cdk-lib/aws-lambda");
-const lambdaEventSource = require("aws-cdk-lib/aws-lambda-event-sources");
-const dynamodb = require("aws-cdk-lib/aws-dynamodb");
+const cdk = require("@aws-cdk/core");
+const s3 = require("@aws-cdk/aws-s3");
+const iam = require("@aws-cdk/aws-iam");
+const lambda = require("@aws-cdk/aws-lambda");
+const lambdaEventSource = require("@aws-cdk/aws-lambda-event-sources");
+const dynamodb = require("@aws-cdk/aws-dynamodb");
 
 const imageBucket = "cdk-rekn-imagebucket";
 
@@ -61,7 +60,7 @@ class CdkAppStack extends cdk.Stack {
         // ========================================
         const lambdaFn = new lambda.Function(this, "cdk-rekn-function", {
             code: lambda.AssetCode.fromAsset("lambda"),
-            runtime: lambda.Runtime.PYTHON_3_9,
+            runtime: lambda.Runtime.PYTHON_3_8,
             handler: "index.handler",
             role: role,
             environment: {

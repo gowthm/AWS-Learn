@@ -1,3 +1,3 @@
-exports.handler = (event, context, callback) => {
-    callback(null, "Hello, " + event.who + "!");
-};
+export const handler = async (event) => {
+    return "Hello, " + event.who + "!";
+  };
